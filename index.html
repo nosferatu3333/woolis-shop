@@ -409,6 +409,20 @@
     padding:4px 10px;
     width:fit-content;
   }
+  .product-price{
+    font-size:1.05rem;
+    font-weight:800;
+    color:var(--teal-950);
+  }
+  .product-price em{
+    font-style:normal;
+    font-weight:500;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--terracotta);
+    margin-right:6px;
+  }
   .product-photo{
     aspect-ratio:4/3;
     background:
@@ -782,11 +796,12 @@
       <div class="product-grid" id="panel-renta" data-panel="renta">
         <!-- 1 X-SKY -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-xsky.webp')" role="img" aria-label="X-SKY, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/x-sky.jpg')" role="img" aria-label="Yadea X-SKY, bicicleta eléctrica"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · movilidad urbana</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>X-SKY</h3>
+            <p class="product-price"><em>Desde</em>$21,999 MXN</p>
             <p class="product-desc">Compacta, práctica y pensada para el día a día — ideal para renta por estancia corta.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
@@ -794,11 +809,12 @@
 
         <!-- 5 Yadea Artist -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-standing-scooters.webp')" role="img" aria-label="Yadea Artist, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-artist.jpg')" role="img" aria-label="Yadea Artist, scooter eléctrico plegable"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · scooter plegable</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Yadea Artist</h3>
+            <p class="product-price"><em>Desde</em>$14,999 MXN</p>
             <p class="product-desc">25 km/h, hasta 30 km en modo D y plegado rápido, según ficha oficial — fácil de rentar por días.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
@@ -806,11 +822,12 @@
 
         <!-- 4 Triciclo eléctrico -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-covered-trike.webp')" role="img" aria-label="Triciclo eléctrico, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/triciclo-k7.jpg')" role="img" aria-label="Yadea K7, triciclo eléctrico"></div>
           <div class="product-body">
             <span class="product-category">Movilidad accesible</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Triciclo eléctrico</h3>
+            <p class="product-price"><em>Desde</em>$28,499 MXN</p>
             <p class="product-desc">Estabilidad, protección y facilidad de acceso — disponible por renta.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
@@ -820,11 +837,12 @@
       <div class="product-grid" id="panel-venta" data-panel="venta" hidden>
         <!-- 2 GT60 -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-gt60.webp')" role="img" aria-label="GT60, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/gt60.jpg')" role="img" aria-label="Yadea GT60, motocicleta eléctrica"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · moto eléctrica</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>GT60</h3>
+            <p class="product-price"><em>Desde</em>$36,499 MXN</p>
             <p class="product-desc">Hasta 55 km/h y 85 km de autonomía según la versión oficial — pensada para compra.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
@@ -832,11 +850,12 @@
 
         <!-- 3 Cooljoy E8 -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-cooljoy.webp')" role="img" aria-label="Cooljoy E8, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/cooljoy.jpg')" role="img" aria-label="Yadea Cooljoy, bicicleta eléctrica utilitaria"></div>
           <div class="product-body">
             <span class="product-category">Identificación por confirmar · utilitaria</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Cooljoy E8</h3>
+            <p class="product-price"><em>Desde</em>$19,999 MXN</p>
             <p class="product-desc">Formato cómodo para mandados, trabajo y recorridos cortos.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
@@ -844,18 +863,19 @@
 
         <!-- 6 Línea lifestyle -->
         <article class="product-card">
-          <div class="product-photo has-photo" style="background-image:url('images/yadea-retro-scooter.webp')" role="img" aria-label="Línea lifestyle, ejemplo de producto disponible en tienda"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/ova-lifestyle.jpg')" role="img" aria-label="Yadea OVA, motocicleta eléctrica estilo vintage"></div>
           <div class="product-body">
             <span class="product-category">Diseño con personalidad</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Línea lifestyle</h3>
+            <p class="product-price"><em>Desde</em>$25,499 MXN</p>
             <p class="product-desc">Movilidad eléctrica que también se siente como estilo.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
         </article>
       </div>
 
-      <p class="verify-note">X-SKY, GT60 y Artist fueron contrastados con el catálogo oficial de Yadea México. Este catálogo, incluyendo la división entre renta y venta, es provisional: modelo exacto, versión, precio, existencia, garantía y condiciones se confirman con la tienda Woolis y con la tienda hermana de Yadea antes de publicar la versión final.</p>
+      <p class="verify-note">Fotografía y precios tomados de la Guía de Movilidad Yadea Riviera Maya (julio–agosto 2026). "Triciclo eléctrico" corresponde al modelo K7 y "Línea lifestyle" al modelo OVA. Este catálogo, incluyendo la división entre renta y venta y los precios mostrados, es provisional: modelo exacto, versión, precio, existencia, garantía y condiciones se confirman con la tienda Woolis y con la tienda hermana de Yadea antes de publicar la versión final.</p>
     </div>
   </section>
 
