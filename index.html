@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Woolis Shop · Tulum</title>
-<meta name="description" content="Concepto digital para Woolis: comunidad, vida local y movilidad eléctrica en Tulum.">
+<meta name="description" content="Movilidad eléctrica en Tulum: renta y venta de motos, scooters y triciclos eléctricos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2220%22%20fill%3D%22%230d2b26%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2234%22%20font-weight%3D%22600%22%20fill%3D%22%23c8f169%22%20text-anchor%3D%22middle%22%3EW%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Woolis Shop · Tulum">
+<meta property="og:description" content="Movilidad eléctrica en Tulum: renta y venta de motos, scooters y triciclos eléctricos.">
+<meta name="twitter:card" content="summary">
 <style>
   :root{
     --teal-950:#0d2b26;
@@ -370,6 +375,40 @@
     transform:translateY(-4px);
     border-color:rgba(200,241,105,0.45);
   }
+  .movilidad-tabs{
+    display:inline-flex;
+    gap:4px;
+    background:rgba(250,246,236,0.08);
+    border-radius:999px;
+    padding:4px;
+    margin:8px 0 28px;
+  }
+  .tab-btn{
+    border:none;
+    background:transparent;
+    color:var(--sand-100);
+    font-weight:700;
+    font-size:0.92rem;
+    padding:10px 22px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background-color .15s ease, color .15s ease;
+  }
+  .tab-btn.is-active{
+    background:var(--lime);
+    color:var(--teal-950);
+  }
+  .product-pending{
+    display:inline-block;
+    font-size:0.68rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    color:var(--terracotta);
+    background:rgba(224,122,78,0.14);
+    border-radius:999px;
+    padding:4px 10px;
+    width:fit-content;
+  }
   .product-photo{
     /* TODO: replace with real product photography */
     aspect-ratio:4/3;
@@ -725,53 +764,24 @@
       <div class="section-head">
         <span class="eyebrow">Woolis electric edit</span>
         <h2>Encuentra tu manera de moverte.</h2>
+        <p>Renta para tu estancia en Tulum o compra para quedarte. Catálogo en confirmación con tienda — el inventario final se actualiza esta semana.</p>
       </div>
 
-      <div class="product-grid">
+      <div class="movilidad-tabs" role="tablist">
+        <button type="button" class="tab-btn is-active" data-tab-target="renta" role="tab" aria-selected="true" aria-controls="panel-renta">Renta</button>
+        <button type="button" class="tab-btn" data-tab-target="venta" role="tab" aria-selected="false" aria-controls="panel-venta">Venta</button>
+      </div>
+
+      <div class="product-grid" id="panel-renta" data-panel="renta">
         <!-- 1 X-SKY -->
         <article class="product-card">
           <!-- TODO: replace with real product photography -->
           <div class="product-photo" role="img" aria-label="Placeholder de producto X-SKY"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · movilidad urbana</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>X-SKY</h3>
-            <p class="product-desc">Compacta, práctica y pensada para el día a día.</p>
-            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
-          </div>
-        </article>
-
-        <!-- 2 GT60 -->
-        <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto GT60"></div>
-          <div class="product-body">
-            <span class="product-category">Modelo identificado · moto eléctrica</span>
-            <h3>GT60</h3>
-            <p class="product-desc">Hasta 55 km/h y 85 km de autonomía según la versión oficial.</p>
-            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
-          </div>
-        </article>
-
-        <!-- 3 Cooljoy E8 -->
-        <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Cooljoy E8"></div>
-          <div class="product-body">
-            <span class="product-category">Identificación por confirmar · utilitaria</span>
-            <h3>Cooljoy E8</h3>
-            <p class="product-desc">Formato cómodo para mandados, trabajo y recorridos cortos.</p>
-            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
-          </div>
-        </article>
-
-        <!-- 4 Triciclo eléctrico -->
-        <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Triciclo eléctrico"></div>
-          <div class="product-body">
-            <span class="product-category">Movilidad accesible</span>
-            <h3>Triciclo eléctrico</h3>
-            <p class="product-desc">Estabilidad, protección y facilidad de acceso.</p>
+            <p class="product-desc">Compacta, práctica y pensada para el día a día — ideal para renta por estancia corta.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
         </article>
@@ -782,8 +792,50 @@
           <div class="product-photo" role="img" aria-label="Placeholder de producto Yadea Artist"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · scooter plegable</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Yadea Artist</h3>
-            <p class="product-desc">25 km/h, hasta 30 km en modo D y plegado rápido, según ficha oficial.</p>
+            <p class="product-desc">25 km/h, hasta 30 km en modo D y plegado rápido, según ficha oficial — fácil de rentar por días.</p>
+            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
+          </div>
+        </article>
+
+        <!-- 4 Triciclo eléctrico -->
+        <article class="product-card">
+          <!-- TODO: replace with real product photography -->
+          <div class="product-photo" role="img" aria-label="Placeholder de producto Triciclo eléctrico"></div>
+          <div class="product-body">
+            <span class="product-category">Movilidad accesible</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
+            <h3>Triciclo eléctrico</h3>
+            <p class="product-desc">Estabilidad, protección y facilidad de acceso — disponible por renta.</p>
+            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-grid" id="panel-venta" data-panel="venta" hidden>
+        <!-- 2 GT60 -->
+        <article class="product-card">
+          <!-- TODO: replace with real product photography -->
+          <div class="product-photo" role="img" aria-label="Placeholder de producto GT60"></div>
+          <div class="product-body">
+            <span class="product-category">Modelo identificado · moto eléctrica</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
+            <h3>GT60</h3>
+            <p class="product-desc">Hasta 55 km/h y 85 km de autonomía según la versión oficial — pensada para compra.</p>
+            <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
+          </div>
+        </article>
+
+        <!-- 3 Cooljoy E8 -->
+        <article class="product-card">
+          <!-- TODO: replace with real product photography -->
+          <div class="product-photo" role="img" aria-label="Placeholder de producto Cooljoy E8"></div>
+          <div class="product-body">
+            <span class="product-category">Identificación por confirmar · utilitaria</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
+            <h3>Cooljoy E8</h3>
+            <p class="product-desc">Formato cómodo para mandados, trabajo y recorridos cortos.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
           </div>
         </article>
@@ -794,6 +846,7 @@
           <div class="product-photo" role="img" aria-label="Placeholder de producto Línea lifestyle"></div>
           <div class="product-body">
             <span class="product-category">Diseño con personalidad</span>
+            <span class="product-pending">Pendiente de confirmación de inventario</span>
             <h3>Línea lifestyle</h3>
             <p class="product-desc">Movilidad eléctrica que también se siente como estilo.</p>
             <a href="#quiero-informacion" class="product-link">Consultar disponibilidad →</a>
@@ -801,7 +854,7 @@
         </article>
       </div>
 
-      <p class="verify-note">X-SKY, GT60 y Artist fueron contrastados con el catálogo oficial de Yadea México. Modelo exacto, versión, precio, existencia, garantía y condiciones deben confirmarse con la tienda antes de publicar la versión comercial.</p>
+      <p class="verify-note">X-SKY, GT60 y Artist fueron contrastados con el catálogo oficial de Yadea México. Este catálogo, incluyendo la división entre renta y venta, es provisional: modelo exacto, versión, precio, existencia, garantía y condiciones se confirman con la tienda Woolis y con la tienda hermana de Yadea antes de publicar la versión final.</p>
     </div>
   </section>
 
@@ -900,7 +953,7 @@
 
         <div class="contact-side">
           <h3>¿Qué pasa después de enviar tu formulario?</h3>
-          <p>Este sitio es una propuesta conceptual: por ahora no hay backend conectado. Tu información se organiza automáticamente en un mensaje de WhatsApp para que puedas enviarlo directo a la tienda.</p>
+          <p>Tu información se envía a nuestro equipo y, además, se organiza automáticamente en un mensaje de WhatsApp para que puedas enviarlo directo a la tienda.</p>
           <ul>
             <li><span class="dot"></span>Te contactamos por WhatsApp para resolver dudas.</li>
             <li><span class="dot"></span>Confirmamos existencia real en tienda.</li>
@@ -949,6 +1002,21 @@
       });
     }
 
+    // Renta / Venta tabs
+    document.querySelectorAll('.tab-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var target = btn.getAttribute('data-tab-target');
+        document.querySelectorAll('.tab-btn').forEach(function(b){
+          var active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        document.querySelectorAll('.product-grid[data-panel]').forEach(function(panel){
+          panel.hidden = panel.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+
     // Inquiry form -> WhatsApp deep link
     var WHATSAPP_NUMBER = "529984015977";
     var form = document.getElementById("inquiryForm");
@@ -986,6 +1054,12 @@
           form.reportValidity();
           return;
         }
+        var data = Object.fromEntries(new FormData(form).entries());
+        fetch('https://leads-api-production-fb78.up.railway.app/api/leads/woolis-shop', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        }).catch(function(){});
         var url = updateWhatsAppLink();
         if (formStatus) {
           formStatus.textContent = "¡Gracias! Tu solicitud está lista. Usa el botón de WhatsApp para enviarla directo a la tienda.";
