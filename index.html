@@ -410,7 +410,6 @@
     width:fit-content;
   }
   .product-photo{
-    /* TODO: replace with real product photography */
     aspect-ratio:4/3;
     background:
       radial-gradient(circle at 30% 20%, rgba(200,241,105,0.55), transparent 55%),
@@ -436,6 +435,14 @@
     letter-spacing:0.18em;
     font-size:0.85rem;
     color:rgba(250,246,236,0.55);
+  }
+  .product-photo.has-photo{
+    background-size:cover;
+    background-position:center;
+  }
+  .product-photo.has-photo::before,
+  .product-photo.has-photo::after{
+    content:none;
   }
   .product-body{
     padding:24px;
@@ -775,8 +782,7 @@
       <div class="product-grid" id="panel-renta" data-panel="renta">
         <!-- 1 X-SKY -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto X-SKY"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-xsky.webp')" role="img" aria-label="X-SKY, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · movilidad urbana</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
@@ -788,8 +794,7 @@
 
         <!-- 5 Yadea Artist -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Yadea Artist"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-standing-scooters.webp')" role="img" aria-label="Yadea Artist, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · scooter plegable</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
@@ -801,8 +806,7 @@
 
         <!-- 4 Triciclo eléctrico -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Triciclo eléctrico"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-covered-trike.webp')" role="img" aria-label="Triciclo eléctrico, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Movilidad accesible</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
@@ -816,8 +820,7 @@
       <div class="product-grid" id="panel-venta" data-panel="venta" hidden>
         <!-- 2 GT60 -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto GT60"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-gt60.webp')" role="img" aria-label="GT60, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Modelo identificado · moto eléctrica</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
@@ -829,8 +832,7 @@
 
         <!-- 3 Cooljoy E8 -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Cooljoy E8"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-cooljoy.webp')" role="img" aria-label="Cooljoy E8, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Identificación por confirmar · utilitaria</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
@@ -842,8 +844,7 @@
 
         <!-- 6 Línea lifestyle -->
         <article class="product-card">
-          <!-- TODO: replace with real product photography -->
-          <div class="product-photo" role="img" aria-label="Placeholder de producto Línea lifestyle"></div>
+          <div class="product-photo has-photo" style="background-image:url('images/yadea-retro-scooter.webp')" role="img" aria-label="Línea lifestyle, ejemplo de producto disponible en tienda"></div>
           <div class="product-body">
             <span class="product-category">Diseño con personalidad</span>
             <span class="product-pending">Pendiente de confirmación de inventario</span>
